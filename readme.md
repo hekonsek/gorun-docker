@@ -8,7 +8,7 @@ and set up, you don't need to have Go installed on your machine and still enjoy 
 
 To install dockerized gorun create the following bash function:
 
-    echo 'go-run () { docker run --net=host -v `pwd`:/gorun hekonsek/gorun-docker "$@"; }' >> ~/.bashrc
+    echo 'go-run () { docker run --net=host --privileged -v ~/go/src:/root/go/src -v `pwd`:/gorun hekonsek/gorun-docker "$@"; }' >> ~/.bashrc
 
 Then to run Go script from a current directory, execute the following command:
 
